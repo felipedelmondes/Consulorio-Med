@@ -1,0 +1,39 @@
+@model IEnumerable<SisMed.ViewModels.ListarMedicoViewModel>
+
+<section>
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Médicos</h1>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-body table-responsive p-0">
+                <table class="table table-head-fixed text-nowrap">
+                    <thead>
+                        <tr>
+                            <th style="width: 200px;">CRM</th>
+                            <th>Nome</th>
+                            <th style="width: 40px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var m in Model)
+                        {
+                            <tr>
+                                <td>@m.Crm</td>
+                                <td>@m.Nome</td>
+                                <td></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
